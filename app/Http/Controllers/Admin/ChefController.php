@@ -178,7 +178,7 @@ class ChefController extends Controller
 
         // Parentesi relazione. Senza parentesi chiamo il model
         $chef->specializations()->sync($data['specializations']);
-        return redirect()->route('admin.chefs.show', $chef)->with('edit-chef', $chef->user->name . ' ' . 'has been edited with success');
+        return redirect()->route('admin.chefs.show', $chef)->with('edit-chef', $chef->user->name . ' ' . 'è stato MODIFICATO con successo');
     }
 
     /**
