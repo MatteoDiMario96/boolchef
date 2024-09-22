@@ -37,12 +37,12 @@
                         {{ $message }}
                     </div>
                 @enderror
-            <label for="description_of_dishes">
-                <strong>
-                    Descrizione dei piatti
-                </strong>
-            </label>
-            <textarea class="form-control mb-3" placeholder="Descrizione piatti" name="description_of_dishes" id="description_of_dishes" >{{old('description_of_dishes')}}</textarea>
+                <label for="description_of_dishes">
+                    <strong>
+                        Descrizione dei piatti
+                    </strong>
+                </label>
+                <textarea class="form-control mb-3" placeholder="Description of dishes" name="description_of_dishes" rows="5" cols="33">{{ old('description_of_dishes') }}</textarea>
             <span class="invalid-feedback"></span>
 
             <!--Input file--->

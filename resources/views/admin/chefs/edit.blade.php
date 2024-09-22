@@ -34,19 +34,17 @@
             <input type="text" value="{{ old('telephone', $chef->telephone) }}
         " name="telephone"
                 class="form-control mb-3">
-                @error('descriprion_of_dishes')
+                @error('description_of_dishes')
                     <div class="alert alert-danger mb-3">
                         {{ $message }}
                     </div>
                 @enderror
-            <label for="descriprion_of_dishes">
+            <label for="description_of_dishes">
                 <strong>
                     Descrizione dei piatti
                 </strong>
             </label>
-            <textarea class="form-control mb-3" placeholder="Description of dishes" value="" name="description_of_dishes" rows="5" cols="33">
-                {{ old('description_of_dishes', $chef->description_of_dishes) }}
-            </textarea>
+            <textarea class="form-control mb-3" placeholder="Description of dishes" name="description_of_dishes" id="description_of_dishes" rows="5" cols="33">{{ old('description_of_dishes', $chef->description_of_dishes) }}</textarea>
 
             <!--Input file--->
             @error('photograph')

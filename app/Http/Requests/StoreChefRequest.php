@@ -28,6 +28,7 @@ class StoreChefRequest extends FormRequest
             "telephone"=>'required|numeric|unique:chefs',
             "visibility" => 'nullable|boolean',
             "specializations"=>'required|array|exists:specializations,id',
+            "description_of_dishes"=>'max:255',
         ];
     }
 
