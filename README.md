@@ -44,31 +44,57 @@ Una piattaforma multi-page che permette agli utenti di prenotare uno chef a domi
 ## Installazione
 
 1. Clonare il repository del **Frontend**:
-   - Vai su [vue-boolchef](https://github.com/MatteoDiMario96/vue-boolchef) e clicca sul pulsante **Code**.
-   - Copia l'URL del repository.
-   - Esegui il comando per clonare il repository nel tuo terminale.
+   - Esegui il comando:
+     ```bash
+     git clone https://github.com/MatteoDiMario96/vue-boolchef
+     ```
 
 2. Clonare il repository del **Backend**:
-   - Vai su [boolchef](https://github.com/MatteoDiMario96/boolchef) e clicca sul pulsante **Code**.
-   - Copia l'URL del repository.
-   - Esegui il comando per clonare il repository nel tuo terminale.
+   - Esegui il comando:
+     ```bash
+     git clone https://github.com/MatteoDiMario96/boolchef
+     ```
 
 3. Installare le dipendenze per il **Frontend**:
-   - Accedi alla cartella del progetto frontend.
-   - Esegui il comando per installare le dipendenze.
+   - Accedi alla cartella del progetto frontend:
+     ```bash
+     cd vue-boolchef
+     ```
+   - Esegui il comando:
+     ```bash
+     npm install
+     ```
 
 4. Installare le dipendenze per il **Backend**:
-   - Accedi alla cartella del progetto backend.
-   - Esegui il comando per installare le dipendenze.
+   - Accedi alla cartella del progetto backend:
+     ```bash
+     cd ../boolchef
+     ```
+   - Esegui il comando:
+     ```bash
+     composer install
+     ```
 
 5. Configurare il file `.env` con i dettagli del database e altre variabili necessarie.
 
 6. Eseguire le migrazioni e il seeding del database nel **Backend**:
-   - Esegui il comando per eseguire le migrazioni e il seeding.
+   - Esegui il comando:
+     ```bash
+     php artisan migrate --seed
+     ```
 
 7. Avviare il server locale per il **Backend**:
-   - Esegui il comando per avviare il server.
+   - Esegui il comando:
+     ```bash
+     php artisan serve
+     ```
 
 8. Tornare alla cartella del **Frontend** e avviare il server:
-   - Accedi nuovamente alla cartella del progetto frontend.
-   - Esegui il comando per avviare il server.
+   - Accedi nuovamente alla cartella del progetto frontend:
+     ```bash
+     cd ../vue-boolchef
+     ```
+   - Esegui il comando:
+     ```bash
+     npm run dev
+     ```
