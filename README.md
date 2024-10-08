@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Boolchef Web App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Una piattaforma multi-page che permette agli utenti di prenotare uno chef a domicilio. Il sito presenta una dashboard per gli chef e varie funzionalità per aiutare gli utenti a scegliere lo chef più adatto alle loro esigenze, basate su specializzazioni, recensioni e voti.
 
-## About Laravel
+## Funzionalità Principali
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Sito Pubblico
+1. **Pagina Homepage**: Informazioni sulla nostra missione e sulla qualità dei servizi offerti, con una lista degli chef sponsorizzati.
+2. **Chef Sponsorizzati**: Gli chef con una sponsorizzazione attiva vengono visualizzati prima degli altri nelle ricerche.
+3. **Ricerca Chef**:
+    - **Home**: Possibilità di cercare gli chef per specializzazione (es. Italiana, Giapponese, ecc.).
+    - **Pagina dedicata alla ricerca**: Filtro degli chef per specializzazione, voto medio e recensioni.
+4. **Dettagli Chef**: Visualizzazione della scheda completa dello chef, con possibilità di:
+    - Inviare messaggi diretti.
+    - Lasciare una recensione.
+    - Assegnare un voto.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Dashboard Chef
+1. **Gestione Messaggi e Recensioni**: Lo chef può visualizzare i messaggi ricevuti dagli utenti e leggere le recensioni.
+2. **Sponsorizzazione**: Gli chef possono attivare una sponsorizzazione per aumentare la visibilità nel sito.
+3. **Modifica Profilo**: Gli chef possono aggiornare le informazioni del proprio profilo.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Architettura
 
-## Learning Laravel
+### Frontend
+- **Vue.js**: Utilizzato per la creazione dell'interfaccia utente dinamica.
+- **Sass**: Utilizzato per la gestione avanzata degli stili CSS.
+- **API**: Le interazioni tra frontend e backend, come la ricerca degli chef, l'invio di messaggi e recensioni, avvengono tramite chiamate API.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Backend
+- **Laravel**: Il backend è sviluppato con Laravel. La gestione dei dati, come la sponsorizzazione e le recensioni, avviene tramite il framework.
+- **JavaScript**: Utilizzato per le validazioni all'interno delle funzionalità di Laravel.
+- **Database**: Gestito tramite Laravel migrations e seeder (non è stato utilizzato MySQL).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Dashboard Chef
+- **Laravel**: La dashboard è interamente gestita tramite Laravel con alcune funzionalità JavaScript per l'interattività.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tecnologie Utilizzate
+- **Frontend**: Vue.js, Sass
+- **Backend**: Laravel, JavaScript (validazioni)
+- **Database**: Gestito tramite Laravel migrations e seeder
+- **API**: Laravel API per la comunicazione tra frontend e backend
 
-## Laravel Sponsors
+## Installazione
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Clonare il repository del **Frontend**:
+   - Vai su [vue-boolchef](https://github.com/MatteoDiMario96/vue-boolchef) e clicca sul pulsante **Code**.
+   - Copia l'URL del repository.
+   - Esegui il comando per clonare il repository nel tuo terminale.
 
-### Premium Partners
+2. Clonare il repository del **Backend**:
+   - Vai su [boolchef](https://github.com/MatteoDiMario96/boolchef) e clicca sul pulsante **Code**.
+   - Copia l'URL del repository.
+   - Esegui il comando per clonare il repository nel tuo terminale.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. Installare le dipendenze per il **Frontend**:
+   - Accedi alla cartella del progetto frontend.
+   - Esegui il comando per installare le dipendenze.
 
-## Contributing
+4. Installare le dipendenze per il **Backend**:
+   - Accedi alla cartella del progetto backend.
+   - Esegui il comando per installare le dipendenze.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Configurare il file `.env` con i dettagli del database e altre variabili necessarie.
 
-## Code of Conduct
+6. Eseguire le migrazioni e il seeding del database nel **Backend**:
+   - Esegui il comando per eseguire le migrazioni e il seeding.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. Avviare il server locale per il **Backend**:
+   - Esegui il comando per avviare il server.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Tornare alla cartella del **Frontend** e avviare il server:
+   - Accedi nuovamente alla cartella del progetto frontend.
+   - Esegui il comando per avviare il server.
